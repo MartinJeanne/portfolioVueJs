@@ -6,6 +6,7 @@
   --black-text: rgb(31, 30, 30);
   --white-bg: #fff;
   --red-bg: #ee0c00;
+  --black-bg: rgb(31, 30, 30);
 
   /* Global style */
   font-family: 'Roboto', sans-serif;
@@ -22,6 +23,57 @@ body {
 }
 
 #app {
-  background: white;
+  height: 100vh;
   display: grid;
+  grid-template-columns: 1.5fr 1fr 1fr;
+}
+
+article {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
+}
+
+.cell {}
+
+.cell h1 {
+  font-size: 3em;
+  margin: 0 auto;
+  padding: 1vw;
+}
+
+.cell p {
+  margin: 0;
+  font-size: 1.5em;
+  padding: 1vw;
+}
+
+.cell.small {
+  grid-row: span 1;
+}
+
+.cell.big {
+  grid-row: span 2;
+}
+
+.cell.red {
+  background: var(--red-bg);
+  color: var(--white-text);
+}
+
+.cell.white {
+  background: var(--white-bg);
+  color: var(--black-text);
+}
+
+.cell.black {
+  background: var(--black-bg);
+  color: var(--white-text);
+}
+
+img {
+  display: block;
+  width: 50%;
+  height: 50%;
+  margin: auto;
 }
