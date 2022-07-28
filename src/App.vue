@@ -14,7 +14,7 @@ export default {
     </div>
 
     <div class="cell big black">
-      <img src="public/vite.svg" alt="Vite logo" width="50%" style="">
+      <img src="/vite.svg" alt="Vite logo" width="50%" style="">
       <img src="src/assets/vue.svg" alt="Vite logo" width="50%" style="">
     </div>
   </article>
