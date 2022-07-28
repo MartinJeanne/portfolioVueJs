@@ -8,19 +8,18 @@ export default {
 
 <template>
 
-  <article>
-    <div class="cell small red">
+  <header class="grid last-big">
+    <div class="cell red">
       <h1>Welcome on my portfolio</h1>
     </div>
 
-    <div class="cell big black">
-      <img src="/vite.svg" alt="Vite logo" width="50%" style="">
-      <img src="src/assets/vue.svg" alt="Vite logo" width="50%" style="">
+    <div class="cell black">
+      <img src="src/assets/pp_cool.jpg" alt="Photo de profil">
     </div>
-  </article>
+  </header>
 
-  <article>
-    <div class="cell big white">
+  <article class="grid first-big">
+    <div class="cell white">
       <p>There will be good stuff in here !</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit
@@ -28,13 +27,13 @@ export default {
       </p>
     </div>
 
-    <div class="cell small red">
+    <div class="cell red">
       <p>Lorem ipsum dolor sit amet.</p>
     </div>
   </article>
 
-  <article>
-    <div class="cell small red">
+  <footer class="grid last-big">
+    <div class="cell red">
       <p>There will be good stuff in here !</p>
       <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit
@@ -42,10 +41,10 @@ export default {
       </p>
     </div>
 
-    <div class="cell big black">
+    <div class="cell black">
       <p>Lorem, ipsum dolor.</p>
     </div>
-  </article>
+  </footer>
 
 </template>
 
