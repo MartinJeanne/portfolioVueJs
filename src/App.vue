@@ -8,8 +8,8 @@ export default {
 
 <template>
   <header class="short red">
-    <h1>Martin Jeanne</h1>
-    <h1>Portfolio</h1>
+    <h1 id="myName">Martin</h1>
+    <h1 id="portfolio">Portfolio</h1>
   </header>
 
   <article class="tall white">
@@ -29,7 +29,12 @@ export default {
   </article>
 
   <div class="tall black">
-    <img src="src/assets/pp_cool.jpg" alt="Photo Martin" width="1196" height="2301"/>
+    <img
+      src="src/assets/pp_cool.jpg"
+      alt="Photo Martin"
+      width="1196"
+      height="2301"
+    />
   </div>
 
   <footer class="tall black">
@@ -50,4 +55,11 @@ export default {
 </template>
 
 <style scoped>
+#myName {
+  letter-spacing: 4px;
+}
+
+#portfolio {
+  font-weight: 400;
+}
 </style>
