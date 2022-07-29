@@ -8,7 +8,8 @@ export default {
 
 <template>
   <header class="short red">
-    <h1>Welcome on my portfolio</h1>
+    <h1>Martin Jeanne</h1>
+    <h1>Portfolio</h1>
   </header>
 
   <article class="tall white">
