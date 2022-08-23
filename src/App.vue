@@ -10,18 +10,19 @@ export default {
   <header class="short red">
     <h1 id="myName">Martin</h1>
     <h1 id="portfolio">Portfolio</h1>
+    <p>Welcome on the portfolio of a junior developper (i know it doesn't seem to be)</p>
+    
   </header>
 
   <article class="tall white">
-    <p>There will be good stuff in here !</p>
+    <h2>Projects</h2>
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit
-      beatae quia voluptatem tenetur temporibus quibusdam doloribus !
+      There's a list of projects that i participed to !
     </p>
   </article>
 
-  <article class="short red">
-    <p>There will be good stuff in here !</p>
+  <article class="medium red">
+    <h2>Free</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit
       beatae quia voluptatem tenetur temporibus quibusdam doloribus !
@@ -29,6 +30,7 @@ export default {
   </article>
 
   <div class="tall black">
+    <h2>Photo + contact</h2>
     <img
       src="src/assets/pp_cool.jpg"
       alt="Photo Martin"
@@ -37,8 +39,8 @@ export default {
     />
   </div>
 
-  <footer class="tall black">
-    <p>There will be good stuff in here !</p>
+  <footer class="medium black">
+    <h2>Footer</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit
       beatae quia voluptatem tenetur temporibus quibusdam doloribus !
@@ -46,7 +48,7 @@ export default {
   </footer>
 
   <article class="short red">
-    <p>There will be good stuff in here !</p>
+    <h2>Skills</h2>
     <p>
       Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit
       beatae quia voluptatem tenetur temporibus quibusdam doloribus !
