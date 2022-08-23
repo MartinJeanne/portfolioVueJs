@@ -1,8 +1,9 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
+import Project from './components/Project.vue'
 
 export default {
-  components: { HelloWorld }
+  components: { HelloWorld, Project }
 }
 </script>
 
@@ -10,15 +11,16 @@ export default {
   <header class="short red">
     <h1 id="myName">Martin</h1>
     <h1 id="portfolio">Portfolio</h1>
-    <p>Welcome on the portfolio of a junior developper (i know it doesn't seem to be)</p>
-    
+    <p>
+      Welcome on the portfolio of a junior developper (i know it doesn't seem to
+      be)
+    </p>
   </header>
 
   <article class="tall white">
     <h2>Projects</h2>
-    <p>
-      There's a list of projects that i participed to !
-    </p>
+    <p>There's a list of projects that i participed to !</p>
+    <Project title="Title" desc="Description" src="Src" />
   </article>
 
   <article class="medium red">
@@ -57,6 +59,15 @@ export default {
 </template>
 
 <style scoped>
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: 20% 50%;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  filter: grayscale(100%) contrast(170%);
+}
+
 #myName {
   letter-spacing: 4px;
 }
