@@ -2,17 +2,16 @@
 
 :root {
   /* var */
-  --white-text: #f7f7f7;
-  --black-text: rgb(31, 30, 30);
-  --white-bg: #fff;
-  --red-bg: #ee0c00;
-  --black-bg: rgb(31, 30, 30);
+  --white: #f7f7ff;
+  --black: #171614;
+  --red: #ef233c;
+  --grey: #2e2b28;
 
   /* Global style */
   font-family: 'Roboto', sans-serif;
   font-weight: 400;
-  color: var(--black-text);
-  background-color: var(--white-bg);
+  color: var(--black);
+  background-color: var(--white);
   margin: 0;
   padding: 0;
 }
@@ -56,18 +55,18 @@ img {
 }
 
 .red {
-  background: var(--red-bg);
-  color: var(--white-text);
+  background: var(--red);
+  color: var(--white);
 }
 
 .white {
-  background: var(--white-bg);
-  color: var(--black-text);
+  background: var(--white);
+  color: var(--black);
 }
 
 .black {
-  background: var(--black-bg);
-  color: var(--white-text);
+  background: var(--black);
+  color: var(--white);
 }
 
 .short {
