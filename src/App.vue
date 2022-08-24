@@ -20,7 +20,9 @@ export default {
   <article class="tall white">
     <h2>Projects</h2>
     <p>There's a list of projects that i participed to !</p>
-    <Project title="Title" desc="Description" src="Src" />
+    <Project title="My awsome project" desc="This is my best project !" img="vite.svg" />
+    <Project title="My awsome project" desc="This is my best project !" img="vite.svg" />
+    <Project title="My awsome project" desc="This is my best project !" img="vite.svg" />
   </article>
 
   <article class="medium red">

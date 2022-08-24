@@ -43,8 +43,6 @@ p {
   margin: 0 auto;
 }
 
-
-
 .red {
   background: var(--red);
   color: var(--white);
