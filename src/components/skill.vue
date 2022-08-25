@@ -5,45 +5,61 @@ export default {
   components: {},
 
   props: {
-    msg: String
+    skill: String,
+    value: Number,
+    img: String
   },
 
-  setup() {
-    const count = ref(0)
-    const test = ref()
-
-    return { count }
+  setup(props) {
+    const src = ref('skill/' + props.img);
+    return { src }
   }
 }
 </script>
 
 <template>
-  <h1>{{ msg }}</h1>
-
-  <div class="card">
-    <button type="button" @click="count++">count is {{ count }}</button>
-    <p>
-      Edit
-      <code>components/HelloWorld.vue</code> to test HMR
-    </p>
+  <div class="skill">
+    <p>{{skill}}</p>
+    <progress :value="value" max="100">Hello</progress>
   </div>
-
-  <p>
-    Check out
-    <a href="https://vuejs.org/guide/quick-start.html#local" target="_blank"
-      >create-vue</a
-    >, the official Vue + Vite starter
-  </p>
-  <p>
-    Install
-    <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>
-    in your IDE for a better DX
-  </p>
-  <p class="read-the-docs">Click on the Vite and Vue logos to learn more</p>
 </template>
 
 <style scoped>
-.read-the-docs {
-  color: #888;
+.skill {
+  width: 37vw;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 12px;
+}
+
+p {
+  margin-right: 16px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  font-size: 1.1em;
+  text-transform: uppercase;
+}
+
+progress {
+  border-radius: 6px;
+  width: 30vw;
+  height: 20px;
+  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+}
+
+progress::-webkit-progress-bar {
+  background-color: #eee;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+}
+
+progress::-webkit-progress-value {
+  background-image:
+    -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%),
+    -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)),
+    -webkit-linear-gradient(left, rgb(204, 0, 0), #f44);
+  border-radius: 6px;
+  background-size: 35px 20px, 100% 100%, 100% 100%;
 }
 </style>

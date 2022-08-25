@@ -1,9 +1,11 @@
 <script>
 import HelloWorld from './components/HelloWorld.vue'
 import Project from './components/Project.vue'
+import Skills from './components/Skill.vue'
+import Skill from './components/Skill.vue';
 
 export default {
-  components: { HelloWorld, Project }
+  components: { HelloWorld, Project, Skill, Skill }
 }
 </script>
 
@@ -35,12 +37,7 @@ export default {
 
   <div class="tall black">
     <h2>Photo + contact</h2>
-    <img
-      src="src/assets/pp_cool.jpg"
-      alt="Photo Martin"
-      width="1196"
-      height="2301"
-    />
+    <img src="src/assets/pp_cool.jpg" alt="Photo Martin" width="1196" height="2301" />
   </div>
 
   <footer class="medium black">
@@ -53,10 +50,9 @@ export default {
 
   <article class="short red">
     <h2>Skills</h2>
-    <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil suscipit
-      beatae quia voluptatem tenetur temporibus quibusdam doloribus !
-    </p>
+    <Skill skill="html & css" value="80" />
+    <Skill skill="php" value="80" />
+    <Skill skill="JavaScript" value="80" />
   </article>
 </template>
 

@@ -21,15 +21,15 @@ export default {
 <template>
   <div class="project">
     <img :src="src" :alt="title" />
-    <p>{{ title }}: {{desc}}</p>
+    <p>{{ title }}: {{ desc }}</p>
   </div>
 </template>
 
 <style scoped>
-
 p {
   margin: 0;
-  font-size: 1.3em;;
+  font-size: 1.3em;
+  ;
 }
 
 .project {
