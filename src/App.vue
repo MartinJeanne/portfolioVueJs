@@ -50,9 +50,9 @@ export default {
 
   <article class="short red">
     <h2>Skills</h2>
-    <Skill skill="html & css" value="80" />
-    <Skill skill="php" value="80" />
-    <Skill skill="JavaScript" value="80" />
+    <Skill skill="html & css" value="80" color="red"/>
+    <Skill skill="php" value="45" color="purple"/>
+    <Skill skill="JavaScript" value="70" color="yellow"/>
   </article>
 </template>
 

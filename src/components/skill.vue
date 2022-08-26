@@ -1,5 +1,5 @@
 <script>
-import { ref } from 'vue'
+import { onMounted, ref } from 'vue'
 
 export default {
   components: {},
@@ -7,30 +7,44 @@ export default {
   props: {
     skill: String,
     value: Number,
-    img: String
+    color: String
   },
 
   setup(props) {
-    const src = ref('skill/' + props.img);
-    return { src }
+    const progress = ref(null);
+
+    onMounted(() => {
+      let c = progress.value.classList;
+
+      switch (props.color) {
+        case 'red':
+          c.add('red'); break;
+        case 'yellow':
+          c.add('yellow'); break;
+        case 'purple':
+          c.add('purple'); break;
+      }
+    });
+
+    return { progress }
   }
 }
 </script>
 
 <template>
   <div class="skill">
-    <p>{{skill}}</p>
-    <progress :value="value" max="100">Hello</progress>
+    <p>{{ skill }}</p>
+    <progress ref="progress" :value="value" max="100"></progress>
   </div>
 </template>
 
 <style scoped>
 .skill {
-  width: 37vw;
-  margin: auto;
+  width: 500px;
+  margin-left: 16px;
+  margin-bottom: 12px;
   display: flex;
   justify-content: space-between;
-  margin-bottom: 12px;
 }
 
 p {
@@ -42,24 +56,39 @@ p {
 }
 
 progress {
-  border-radius: 6px;
-  width: 30vw;
-  height: 20px;
-  box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.2);
+  height: 14px;
+  width: 350px;
+  border-radius: 8px;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.25);
+
 }
 
 progress::-webkit-progress-bar {
-  background-color: #eee;
-  border-radius: 6px;
+  border-radius: 8px;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.25) inset;
+  background: #f7f7ff;
 }
 
 progress::-webkit-progress-value {
+  border-radius: 8px;
+}
+
+/* List of color */
+.red::-webkit-progress-value {
   background-image:
-    -webkit-linear-gradient(-45deg, transparent 33%, rgba(0, 0, 0, .1) 33%, rgba(0, 0, 0, .1) 66%, transparent 66%),
-    -webkit-linear-gradient(top, rgba(255, 255, 255, .25), rgba(0, 0, 0, .25)),
-    -webkit-linear-gradient(left, rgb(204, 0, 0), #f44);
-  border-radius: 6px;
-  background-size: 35px 20px, 100% 100%, 100% 100%;
+    -webkit-linear-gradient(top, rgba(255, 255, 255, .1), rgba(0, 0, 0, .1)),
+    -webkit-linear-gradient(left, #ef233c, #ef233c);
+}
+
+.yellow::-webkit-progress-value {
+  background-image:
+    -webkit-linear-gradient(top, rgba(255, 255, 255, .1), rgba(0, 0, 0, .1)),
+    -webkit-linear-gradient(left, #efca23, #f3c33e);
+}
+
+.purple::-webkit-progress-value {
+  background-image:
+    -webkit-linear-gradient(top, rgba(255, 255, 255, .1), rgba(0, 0, 0, .1)),
+    -webkit-linear-gradient(left, #a423ef, #bf40f1);
 }
 </style>
